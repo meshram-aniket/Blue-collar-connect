@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    background-color: rgb(255, 196, 0);
 
 }
 
@@ -15,6 +16,10 @@ section {
 
 
 h2 {
-    font-size: 20pz;
+    font-size: 20px;
     text-align: center;
 }
+
+
+
+

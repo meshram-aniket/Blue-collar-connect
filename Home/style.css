@@ -12,10 +12,14 @@ body section{
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     background-color: #222;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
 
 }
+
 
 .container {
     width: 100%;
@@ -108,8 +112,8 @@ nav ul li a:hover::after {
     line-height: 160px;
     margin-left: -10px;
     color: transparent;
-    -webkit-text-stroke: 1px rgb(253, 252, 252);
-    background: url('/Home/images/back.png');
+    -webkit-text-stroke: 1px #fff;
+    background: url('/images/back.png');
     -webkit-background-clip: text;
     background-position: 0 0;
     animation: back 20s linear infinite;
@@ -182,6 +186,7 @@ nav ul li a:hover::after {
 
 
 .translator {
+    /* padding-top: 100px; */
     width: 150%;
     position: absolute;
     left: 0;
@@ -195,14 +200,14 @@ nav ul li a:hover::after {
 
 
 .word p {
-    font-size: 30px;
+    font-size: 30px;    /* 30px */
     color: white;
 }
 
 
 
 
-#card-section {
+/* #card-section {
     background-color: rgb(189, 198, 174);
     height: 100%;
     width: 100%;
@@ -214,10 +219,10 @@ nav ul li a:hover::after {
 
 
  .card {
-    /* padding-top: 10px; */
+    padding-top: 10px;
     position: relative;
-    width: 300px;
-    height: 350px;
+    width: 200px;
+    height: 250px;
     margin: 20px;
 }
 
@@ -287,7 +292,7 @@ nav ul li a:hover::after {
 
 
 .card .back h3 {
-    font-size: 30px;
+    font-size: 20px;
     margin-top: 20px;
     letter-spacing: 2px;
 }
@@ -309,5 +314,7 @@ nav ul li a:hover::after {
 
 
 
+
+ */
 
 
