@@ -8,8 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     
   </head>
   <body>
@@ -20,7 +18,10 @@
         ORIGINALITY AND QUALITY. AIMING FOR AWARDS PUSHES US TO THINK DEEPER, GO
         FURTHER AND HAVE MEANINGFUL CONVERSATIONS ABOUT WHAT CREATIVITY IS.
       </h1> -->
-      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto pariatur sed, consectetur corrupti nam at!</h1>
+      <h1>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto pariatur
+        sed, consectetur corrupti nam at!
+      </h1>
     </div>
     <div class="imageBoard">
       <img src="img1.png" alt="" id="scaleableImg1" class="scaleableImg" /><img
@@ -45,102 +46,103 @@
   </body>
 
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
   <script>
-   
-gsap.registerPlugin(ScrollTrigger);
-gsap
-  .timeline({
-    scrollTrigger: {
-      trigger: ".imageBoard",
-      pin: true,
-      start: "top top",
-      end: "+=300%",
-      scrub: 1,
-    },
-    defaults: {
-      ease: "none",
-    },
-  })
-  .to(
-    document.body,
-    {
-      delay: 0.3,
-      backgroundColor: "#f0f0f0",
-    },
-    "start"
-  )
-  .to(
-    ".upper-container h1",
-    {
-      scale: 5,
-    },
-    "start"
-  )
-  .to(
-    ".upper-container h1",
-    {
-      opacity: 0,
-    },
-    "start"
-  )
-  .to(
-    "#scaleableImg1",
-    {
-      scale: 10,
-      x: -1500,
-    },
-    "start"
-  )
-  .to(
-    "#scaleableImg2",
-    {
-      scale: 10,
-      x: -2500,
-    },
-    "start"
-  )
-  .to(
-    "#scaleableImg3",
-    {
-      scale: 10,
-      x: -2000,
-    },
-    "start"
-  )
-  .to(
-    "#scaleableImg4",
-    {
-      scale: 10,
-      x: 3000,
-    },
-    "start"
-  )
-  .to(
-    "#scaleableImg5",
-    {
-      scale: 10,
-      x: 2000,
-    },
-    "start"
-  )
-  .to(
-    ".cardImage",
-    {
-      delay: 0.1,
-      scale: 5,
-    },
-    "start"
-  )
-  .to(
-    ".cardImage",
-    {
-      delay: 0.4,
-      opacity: 1,
-    },
-    "start"
-  )
-  .to(".scaleableImg", {
-    opacity: 0,
-  });
+    gsap.registerPlugin(ScrollTrigger);
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".imageBoard",
+          pin: true,
+          start: "top top",
+          end: "+=300%",
+          scrub: 1,
+        },
+        defaults: {
+          ease: "none",
+        },
+      })
+      .to(
+        document.body,
+        {
+          delay: 0.3,
+          backgroundColor: "#f0f0f0",
+        },
+        "start"
+      )
+      .to(
+        ".upper-container h1",
+        {
+          scale: 5,
+        },
+        "start"
+      )
+      .to(
+        ".upper-container h1",
+        {
+          opacity: 0,
+        },
+        "start"
+      )
+      .to(
+        "#scaleableImg1",
+        {
+          scale: 10,
+          x: -1500,
+        },
+        "start"
+      )
+      .to(
+        "#scaleableImg2",
+        {
+          scale: 10,
+          x: -2500,
+        },
+        "start"
+      )
+      .to(
+        "#scaleableImg3",
+        {
+          scale: 10,
+          x: -2000,
+        },
+        "start"
+      )
+      .to(
+        "#scaleableImg4",
+        {
+          scale: 10,
+          x: 3000,
+        },
+        "start"
+      )
+      .to(
+        "#scaleableImg5",
+        {
+          scale: 10,
+          x: 2000,
+        },
+        "start"
+      )
+      .to(
+        ".cardImage",
+        {
+          delay: 0.1,
+          scale: 5,
+        },
+        "start"
+      )
+      .to(
+        ".cardImage",
+        {
+          delay: 0.4,
+          opacity: 1,
+        },
+        "start"
+      )
+      .to(".scaleableImg", {
+        opacity: 0,
+      });
   </script>
 </html>
