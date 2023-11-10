@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .alert {
+        padding: 15px;
+        background-color: #f44336; /* Red background color */
+        color: white; /* White text color */
+        margin-bottom: 15px; /* Add some space at the bottom */
+        position: relative; /* Enable positioning for close button */
+      }
+
+      .close-btn {
+        color: white;
+        float: right;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close-btn:hover {
+        color: black;
+      }
+
+      /* You can add more styles based on your requirements */
+    </style>
+    <title>Styled Alert</title>
+  </head>
+  <body>
+    <button onclick="showAlert()">Show Alert</button>
+
+    <div id="custom-alert" class="alert">
+      <span class="close-btn" onclick="closeAlert()">&times;</span>
+      <p>This is a styled alert!</p>
+    </div>
+
+    <script>
+      function showAlert() {
+        document.getElementById("custom-alert").style.display = "block";
+      }
+
+      function closeAlert() {
+        document.getElementById("custom-alert").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
