@@ -2,7 +2,7 @@ body{
     background-color: #eaeaea;
     overflow: hidden;
 }
-.container{
+.cards{
     position: absolute;
     left:50%;
     top:50%;

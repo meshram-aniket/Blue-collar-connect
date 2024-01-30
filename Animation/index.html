@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&family=Poiret+One&family=Poppins:wght@700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", QuickSand;
+            height: fit-content;
+        }
+        body {
+            background: yellow;
+            /* background: rgb(12, 12, 12); */
+        }
+        h3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-top: -100px;
+            color: #0e112e;
+            font-size: 4em;
+        }
+        section {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #0e112e;
+            /* background: white; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            clip-path: circle(0px at center center);
+        }
+        .innerText {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            white-space: nowrap;
+            z-index: 1;
+            font-size: 10vw;
+            color: #fff;
+            /* color: yellow; */
+            text-align: center;
+            width: 100%;
+            /* font-family: Poiret One; */
+        }
+        .text {
+            position: fixed;
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            white-space: nowrap;
+            z-index: 1;
+            font-size: 10vw;
+            color: transparent;
+            -webkit-text-stroke: 2px #0e112e;
+            text-align: center;
+            width: 100%;
+            /* font-family: Poiret One; */
+        }
+        .container {
+            position: relative;
+            margin-top: 200vh;
+            margin-bottom: 200v;
+            background: #0e112e;
+            /* background: white; */
+            padding: 100px;
+            color: #fff;
+            margin-bottom: 50px; /* Added margin-bottom */
+        }
+        .container h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        
+    </style>
+</head>
+<body>
+<h3>scroll</h3>
+<h2 class="text">SERVICES</h2>
+<section>
+    <h2 class="innerText">SERVICES</h2>
+</section>
+<div class="container">
+    <h2>also watch part 2</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates similique, aperiam magnam incidunt, sint consequatur velit recusandae obcaecati exercitationem tempore ipsum eius vel voluptatum nostrum quibusdam quasi. Corporis culpa quisquam soluta, repellendus, ex blanditiis, qui nisi fugiat incidunt ipsam itaque. Sequi eaque, ipsum optio molestias expedita aliquid fugit laudantium doloribus minima tenetur voluptas rerum tempore id facilis eius laboriosam nemo, ducimus odio minus! Quis et nostrum iure unde, vel magni deserunt suscipit! Dolore dicta, eaque nostrum ex veniam quibusdam perferendis vitae recusandae ut iusto eum harum sit impedit assumenda accusantium expedita placeat accusamus? Fuga accusantium placeat dolorum rem? Beatae, nostrum!</p>
+    
+</div>
+
+<script>
+    let section = document.querySelector("section");
+    let text = document.querySelector(".text");
+    let innerText = document.querySelector(".innerText");
+    window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        section.style.clipPath = "circle(" + value + "px at center center)";
+        text.style.left = 100 - value / 5 + "%";
+        innerText.style.left = 100 - value / 5 + "%";
+    });
+
+    document.getElementById("next").onclick = function () {
+        let lists = document.querySelectorAll(".item");
+        document.getElementById("slide").appendChild(lists[0]);
+    };
+    document.getElementById("prev").onclick = function () {
+        let lists = document.querySelectorAll(".item");
+        document.getElementById("slide").prepend(lists[lists.length - 1]);
+    };
+</script>
+</body>
+</html>
